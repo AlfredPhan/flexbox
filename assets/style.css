@@ -157,7 +157,7 @@ body {
 .center-layout__item {
     font-size: 42px;
     font-weight: 700;
-     /*
+    /*
       Cũng có cách khác là các bạn
       thêm 2 thuộc tính vào flex-container:
       justify-content: center;
@@ -171,3 +171,66 @@ body {
 }
 
 /* Chart */
+.chart-layout {
+    margin: 36px auto 0 auto;
+    padding: 32px 0;
+    height: 320px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+}
+
+.chart-layout__item {
+    align-self: flex-end;
+    width: 60px;
+    color: #fff;
+    text-align: center;
+    height: var(--percent);
+    background-color: #EF5122;
+    animation: growth ease-in 0.5s;
+}
+
+@keyframes growth {
+    from {
+        opacity: 0;
+        height: calc(var(--percent) - 50%);
+    }
+    to {
+        opacity: 1;
+        height: var(--percent);
+    }
+}
+
+/* End */
+.the-end {
+    margin: 12px auto 48px auto;
+    padding: 32px 0;
+    max-width: 740px;
+    min-height: 360px;
+    display: flex;
+    flex-direction: row;
+}
+
+.the-end__first {
+    padding: 4px 16px;
+    background-color: #fff;
+    flex: 1;
+}
+
+.the-end__second {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.the-end__second-one {
+    flex: 1;
+    padding: 4px 16px;
+    background-color: rgb(227, 192, 214);
+}
+
+.the-end__second-two {
+    flex: 1;
+    padding: 4px 16px;
+    background-color: rgb(192, 210, 227);
+}
